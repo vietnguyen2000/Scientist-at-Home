@@ -19,11 +19,15 @@ public abstract class ClickableObject : MyObject
     protected override void Update()
     {
         base.Update();
+    }
+
+    protected void OnMouseEnter()
+    {
         if ((Input.touchCount > 0) && (Input.touches[0].phase == TouchPhase.Began))
         {
             UpdateProgress();
         }
     }
-    
+
     protected abstract void UpdateProgress();
 }

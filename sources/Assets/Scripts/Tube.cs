@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Tube : MonoBehaviour
 {
-    public Color color;
+    public Color color{
+        get=> spriteColor.color;
+        set=> spriteColor.color = value;
+    }
+    public SpriteRenderer spriteColor;
     public Color Merge(Color color1, Color color2){
 
         return color1 + color2;

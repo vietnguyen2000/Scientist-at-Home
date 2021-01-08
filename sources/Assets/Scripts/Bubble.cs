@@ -19,4 +19,18 @@ public abstract class Bubble : ClickableObject
         this.vec.AddForce(this.force);
         base.Update();
     }
+    protected override void UpdateProgress()
+    {
+        animator.Play("BubbleBreak",0);
+        StartCoroutine(DisableAfterTime("BubbleBreak"));
+
+    }
+    IEnumerator DisableAfterTime(string name)
+    {
+        yield return 0;
+        while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){
+            yield return null;
+        }
+        gameObject.SetActive(false);
+     }
 }

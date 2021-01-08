@@ -7,10 +7,12 @@ using System;
 public abstract class ClickableObject : MyObject
 {
     public float unit;
+    public Animator animator;
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,6 @@ public abstract class ClickableObject : MyObject
         if ((Input.touchCount > 0) && (Input.touches[0].phase == TouchPhase.Began))
         {
             UpdateProgress();
-            this.gameObject.SetActive(false);
         }
     }
     

@@ -15,12 +15,11 @@ public class ProgressBar : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        slider = FindObjectOfType<Slider>();
+        slider = GetComponent<Slider>();
     }
 
     void Start()
     {
-        slider.value = 1f;
     }
 
     // Update is called once per frame

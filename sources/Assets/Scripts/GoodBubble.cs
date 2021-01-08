@@ -7,6 +7,7 @@ public class GoodBubble : Bubble
 {
     protected override void UpdateProgress()
     {
+        base.UpdateProgress();
         this.gameManager.progressBar.Increment(this.unit);
     }
 }

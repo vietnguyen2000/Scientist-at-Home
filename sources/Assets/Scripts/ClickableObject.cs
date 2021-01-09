@@ -8,11 +8,16 @@ public abstract class ClickableObject : MyObject
 {
     public float unit;
     public Animator animator;
+    public bool isClicked = false;
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
         animator = GetComponentInChildren<Animator>();
+    }
+
+    private void OnEnable() {
+        isClicked = false;
     }
 
     // Update is called once per frame
@@ -23,9 +28,10 @@ public abstract class ClickableObject : MyObject
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
             pos = new Vector3(pos.x,pos.y,0);
-            Debug.Log(col.bounds);
-            if (col.bounds.Contains(pos))
+            if (col.bounds.Contains(pos) && !isClicked){
                 UpdateProgress();
+                isClicked = true;
+            }               
         }
     }
     protected IEnumerator DisableAfterTime(string name)

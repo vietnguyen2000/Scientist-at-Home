@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Game2 : MonoBehaviour
 {
-    public float value = 1;
+    public float value = 5;
     public float BoomRate = 0.2f;
     private GameManager gameManager;
     public GameObject Boom;

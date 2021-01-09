@@ -14,7 +14,7 @@ public class ProgressBar : MonoBehaviour
         set => slider.value = value;
     }
     public Slider slider;
-    public float decreasementSpeed = 0.2f;
+    public float decreasementSpeed;
 
     // Start is called before the first frame update
     private void Awake()

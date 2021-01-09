@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CountdownTimer : MonoBehaviour
+public class CountdownTimer : MyObject
 {
     public float timeRemaining = 75;
     public bool timerIsRunning = false;
     public Text timeText;
 
-    private void Start()
+    protected override void Start()
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        base.Start();
     }
 
-    void Update()
+    protected override void Update()
     {
         if (timerIsRunning)
         {
@@ -26,9 +27,9 @@ public class CountdownTimer : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                gameManager.lose();
             }
         }
     }

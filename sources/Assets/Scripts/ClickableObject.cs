@@ -9,6 +9,8 @@ public abstract class ClickableObject : MyObject
     public float unit;
     public Animator animator;
     public bool isClicked = false;
+    public float secondAlive;
+    
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -16,8 +18,9 @@ public abstract class ClickableObject : MyObject
         animator = GetComponentInChildren<Animator>();
     }
 
-    private void OnEnable() {
+    protected virtual void OnEnable() {
         isClicked = false;
+        StartCoroutine(DisableAfterTime(secondAlive));
     }
 
     // Update is called once per frame
@@ -26,15 +29,19 @@ public abstract class ClickableObject : MyObject
         base.Update();
         for (int i = 0 ; i < Input.touchCount; i++)
         {
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
-            pos = new Vector3(pos.x,pos.y,0);
-            if (col.bounds.Contains(pos) && !isClicked){
-                UpdateProgress();
-                isClicked = true;
-            }               
+            if (Input.GetTouch(i).phase == TouchPhase.Began){
+                Vector3 pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
+                pos = new Vector3(pos.x,pos.y,0);
+                if (col.OverlapPoint(pos) && !isClicked){
+                    
+                    UpdateProgress();
+                    isClicked = true;
+                }               
+            }
+            
         }
     }
-    virtual protected IEnumerator DisableAfterTime(string name)
+    protected virtual IEnumerator DisableAfterAnimationState(string name)
     {
         yield return 0;
         while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){
@@ -44,4 +51,9 @@ public abstract class ClickableObject : MyObject
      }
     
     protected abstract void UpdateProgress();
+    IEnumerator DisableAfterTime(float sec){
+        yield return 0;
+        yield return new WaitForSeconds(sec);
+        gameObject.SetActive(false);
+    }
 }

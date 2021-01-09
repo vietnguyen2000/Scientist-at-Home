@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Spawner : MyObject
 {
+    public Transform[] listPositionSpawner;
     public float delay;
+    public GameObject GoodBubble;
+    public GameObject BadBubble;
+    public float badRate;
     float from_begin;
 
     // Start is called before the first frame update
@@ -26,7 +30,12 @@ public class Spawner : MyObject
 
     void Spawn()
     {
-        GameObject bubble = Resources.Load<GameObject>("Prefabs/GoodBubble");
-        this.gameManager.pool.Instantiate(bubble);
+        GameObject x;
+        if (Random.Range(0.0f,1.0f) < badRate){
+            x = this.gameManager.pool.Instantiate(BadBubble);    
+        }
+        else x = this.gameManager.pool.Instantiate(GoodBubble);
+        x.transform.position = listPositionSpawner[Random.Range(0,listPositionSpawner.Length-1)].position;
     }
 }
+

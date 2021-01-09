@@ -397,7 +397,22 @@ PrefabInstance:
     - target: {fileID: 7050640872599561296, guid: 4107742f155f8024081df4906882a048,
         type: 3}
       propertyPath: timeRemaining
-      value: 10
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050640872599561303, guid: 4107742f155f8024081df4906882a048,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -230
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050640872599561303, guid: 4107742f155f8024081df4906882a048,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -136.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050640872599561303, guid: 4107742f155f8024081df4906882a048,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 272.3
       objectReference: {fileID: 0}
     - target: {fileID: 7050640873736184483, guid: 4107742f155f8024081df4906882a048,
         type: 3}

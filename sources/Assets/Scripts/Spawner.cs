@@ -5,7 +5,6 @@ using UnityEngine;
 public class Spawner : MyObject
 {
     public float delay;
-    public GameObject samples;
     float from_begin;
 
     // Start is called before the first frame update

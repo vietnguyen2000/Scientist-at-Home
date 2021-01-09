@@ -14,9 +14,8 @@ public abstract class Bubble : ClickableObject
     {
         base.Start();
         this.vec = this.GetComponent<Rigidbody2D>();
-        this.from_begin = Time.fixedTime;
 
-        this.transform.position = new Vector3(Random.Range(-1f, 1f), -4f, this.transform.position.z);
+        Reset();
 
         this.timeToLive = 5;
     }
@@ -54,7 +53,10 @@ public abstract class Bubble : ClickableObject
     void Reset()
     {
         this.from_begin = Time.fixedTime;
-        this.transform.position = new Vector3(Random.Range(-1f, 1f), -4f, this.transform.position.z);
+        this.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), -3f, this.transform.position.z);
+
+        float scale_factor = Random.Range(0.5f, 1f);
+        this.transform.localScale = new Vector3(scale_factor, scale_factor, this.transform.localScale.z);
 
         this.vec.velocity = new Vector2(0, 0);
     }

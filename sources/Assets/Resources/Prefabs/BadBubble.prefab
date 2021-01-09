@@ -48,9 +48,10 @@ MonoBehaviour:
   unit: -20
   animator: {fileID: 0}
   isClicked: 0
-  secondAlive: 10
+  secondAlive: 15
   vec: {fileID: 8902537591536687506}
   force: {x: 0, y: 1}
+  timeToLive: 0
 --- !u!50 &8902537591536687506
 Rigidbody2D:
   serializedVersion: 4

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
+    public Gradient gradient;
+    public GradientColorKey[] colorKey;
+    public GradientAlphaKey[] alphaKey;
+    public Image fill;
     public float Value {
         get => slider.value;
         set => slider.value = value;
@@ -16,6 +20,7 @@ public class ProgressBar : MonoBehaviour
     private void Awake()
     {
         slider = GetComponent<Slider>();
+        slider.interactable = false;
     }
 
     void Start()
@@ -29,6 +34,7 @@ public class ProgressBar : MonoBehaviour
         if (slider.value > 0)
         {
             slider.value -= decreasementSpeed * Time.deltaTime;
+            fill.color = gradient.Evaluate(slider.normalizedValue);
         }
     }
 

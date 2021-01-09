@@ -29,4 +29,14 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("game2",LoadSceneMode.Single);
         }
     }
+
+    public void lose()
+    {
+
+    }
+
+    public void win()
+    {
+        
+    }
 }

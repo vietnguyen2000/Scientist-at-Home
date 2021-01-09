@@ -25,12 +25,5 @@ public abstract class Bubble : ClickableObject
         StartCoroutine(DisableAfterTime("BubbleBreak"));
 
     }
-    IEnumerator DisableAfterTime(string name)
-    {
-        yield return 0;
-        while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){
-            yield return null;
-        }
-        gameObject.SetActive(false);
-     }
+
 }

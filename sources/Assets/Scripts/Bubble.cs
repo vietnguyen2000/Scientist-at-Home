@@ -37,7 +37,7 @@ public abstract class Bubble : ClickableObject
     protected override void UpdateProgress()
     {
         animator.Play("BubbleBreak",0);
-        StartCoroutine(DisableAfterTime("BubbleBreak"));
+        StartCoroutine(DisableAfterAnimationState("BubbleBreak"));
 
     }
 }

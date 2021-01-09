@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4778401363728555816}
-  - component: {fileID: 1243425793727438295}
   - component: {fileID: 8902537591536687506}
+  - component: {fileID: 1900825308653617360}
   m_Layer: 0
   m_Name: BadBubble
   m_TagString: Untagged
@@ -33,24 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1243425793727438295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778401363728555823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4adabec43d6e9604fb36ef9ab53c11e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unit: -20
-  animator: {fileID: 0}
-  isClicked: 0
-  secondAlive: 10
-  vec: {fileID: 8902537591536687506}
-  force: {x: 0, y: 1}
 --- !u!50 &8902537591536687506
 Rigidbody2D:
   serializedVersion: 4
@@ -72,6 +54,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1900825308653617360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778401363728555823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d08a1118bc4084cbe617d1234b8851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: -20
+  animator: {fileID: 0}
+  isClicked: 0
+  secondAlive: 15
+  vec: {fileID: 0}
+  force: {x: 0, y: 1}
 --- !u!1 &4778401363860361371
 GameObject:
   m_ObjectHideFlags: 0

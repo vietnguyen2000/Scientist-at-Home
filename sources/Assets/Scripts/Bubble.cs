@@ -14,13 +14,7 @@ public abstract class Bubble : ClickableObject
         base.Start();
         this.vec = this.GetComponent<Rigidbody2D>();
 
-<<<<<<< HEAD
         this.transform.position = new Vector3(Random.Range(-1f, 1f), -4f, this.transform.position.z);
-=======
-        Reset();
-
-        this.timeToLive = 8;
->>>>>>> game1
     }
 
     // Update is called once per frame
@@ -32,10 +26,6 @@ public abstract class Bubble : ClickableObject
 
     protected override void UpdateProgress()
     {
-<<<<<<< HEAD
-        animator.Play("BubbleBreak",0);
-        StartCoroutine(DisableAfterAnimationState("BubbleBreak"));
-=======
         animator.Play("BubbleBreak", 0);
         StartCoroutine(DisableAfterAnimationState("BubbleBreak"));
     }
@@ -63,6 +53,5 @@ public abstract class Bubble : ClickableObject
         this.transform.localScale = new Vector3(scale_factor, scale_factor, this.transform.localScale.z);
 
         this.vec.velocity = new Vector2(0, 0);
->>>>>>> game1
     }
 }

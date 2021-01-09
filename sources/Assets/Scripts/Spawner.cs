@@ -35,7 +35,6 @@ public class Spawner : MyObject
             x = this.gameManager.pool.Instantiate(BadBubble);    
         }
         else x = this.gameManager.pool.Instantiate(GoodBubble);
-        x.transform.position = listPositionSpawner[Random.Range(0,listPositionSpawner.Length-1)].position;
     }
 }
 

@@ -34,7 +34,7 @@ public abstract class ClickableObject : MyObject
             }               
         }
     }
-    protected IEnumerator DisableAfterTime(string name)
+    virtual protected IEnumerator DisableAfterTime(string name)
     {
         yield return 0;
         while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){

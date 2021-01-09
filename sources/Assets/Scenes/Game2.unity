@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boom
       objectReference: {fileID: 0}
+    - target: {fileID: 7110688054702679719, guid: 14c1960fa0d21764c8d4a1561ce0c67d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110688054702679720, guid: 14c1960fa0d21764c8d4a1561ce0c67d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -392,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 3179473062309276972, guid: 74e94f061a807644f84ebec24ffd31b3,
         type: 3}
       propertyPath: m_Value
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3179473063437375700, guid: 74e94f061a807644f84ebec24ffd31b3,
         type: 3}

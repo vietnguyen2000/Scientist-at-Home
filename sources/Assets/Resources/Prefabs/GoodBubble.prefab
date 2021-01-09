@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3619321284170878193}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6687275, y: -1.6803908, z: 16.414715}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3619321284764932876}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1972277427
-  m_SortingLayer: 1
+  m_SortingLayerID: -109655873
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3416360125426561935, guid: a4ed9139e5706f04da3fb34932b075c5,
     type: 3}
@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3619321284892513415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45308042, y: 2.8356397, z: -16.414715}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3619321284170878194}
@@ -197,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unit: 10
   animator: {fileID: 0}
+  isClicked: 0
+  secondAlive: 10
   vec: {fileID: 857383726568706618}
   force: {x: 0, y: 1}
 --- !u!50 &857383726568706618

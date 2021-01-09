@@ -9,6 +9,8 @@ public abstract class ClickableObject : MyObject
     public float unit;
     public Animator animator;
     public bool isClicked = false;
+    public float secondAlive;
+    
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -18,6 +20,7 @@ public abstract class ClickableObject : MyObject
 
     protected virtual void OnEnable() {
         isClicked = false;
+        StartCoroutine(DisableAfterTime(secondAlive));
     }
 
     // Update is called once per frame
@@ -48,4 +51,9 @@ public abstract class ClickableObject : MyObject
      }
     
     protected abstract void UpdateProgress();
+    IEnumerator DisableAfterTime(float sec){
+        yield return 0;
+        yield return new WaitForSeconds(sec);
+        gameObject.SetActive(false);
+    }
 }

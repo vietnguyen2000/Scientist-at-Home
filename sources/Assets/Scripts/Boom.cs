@@ -5,11 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Boom : ClickableObject
 {
-    public float secondAlive = 3;
-    protected override void OnEnable() {
-        base.OnEnable();
-        StartCoroutine(DisableAfterTime(secondAlive));
-    }
+
     protected override void UpdateProgress()
     {
         this.gameManager.progressBar.Increment(this.unit);
@@ -18,9 +14,5 @@ public class Boom : ClickableObject
         StartCoroutine(DisableAfterAnimationState("Explosion"));
     }
 
-    IEnumerator DisableAfterTime(float sec){
-        yield return 0;
-        yield return new WaitForSeconds(sec);
-        gameObject.SetActive(false);
-    }
+
 }

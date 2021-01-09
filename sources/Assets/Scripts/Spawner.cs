@@ -27,10 +27,7 @@ public class Spawner : MyObject
 
     void Spawn()
     {
-        for (int i = 0; i<=this.samples.transform.childCount - 1; i++)
-        {
-            GameObject child = this.samples.transform.GetChild(i).gameObject;
-            this.gameManager.pool.Instantiate(child);
-        }
+        GameObject bubble = Resources.Load<GameObject>("Prefabs/GoodBubble");
+        this.gameManager.pool.Instantiate(bubble);
     }
 }

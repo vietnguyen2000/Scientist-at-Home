@@ -8,6 +8,7 @@ public abstract class ClickableObject : MyObject
 {
     public float unit;
     public Animator animator;
+    public bool isClicked = false;
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -15,19 +16,32 @@ public abstract class ClickableObject : MyObject
         animator = GetComponentInChildren<Animator>();
     }
 
+    private void OnEnable() {
+        isClicked = false;
+    }
+
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
-    }
-
-    protected void OnMouseEnter()
-    {
-        if ((Input.touchCount > 0) && (Input.touches[0].phase == TouchPhase.Began))
+        for (int i = 0 ; i < Input.touchCount; i++)
         {
-            UpdateProgress();
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+            pos = new Vector3(pos.x,pos.y,0);
+            if (col.bounds.Contains(pos) && !isClicked){
+                UpdateProgress();
+                isClicked = true;
+            }               
         }
     }
-
+    virtual protected IEnumerator DisableAfterTime(string name)
+    {
+        yield return 0;
+        while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){
+            yield return null;
+        }
+        gameObject.SetActive(false);
+     }
+    
     protected abstract void UpdateProgress();
 }

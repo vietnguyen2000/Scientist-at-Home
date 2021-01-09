@@ -9,6 +9,11 @@ public class CountdownTimer : MyObject
     public bool timerIsRunning = false;
     public Text timeText;
 
+    private void Awake()
+    {
+        timeText = GetComponent<Text>();
+    }
+
     protected override void Start()
     {
         // Starts the timer automatically

@@ -38,7 +38,7 @@ public class DragWindow : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     }
 
     // Start is called before the first frame update
-    void Awake()
+    protected virtual void Awake()
     {
         if (dragRectTransform == null)
             dragRectTransform = GetComponent<RectTransform>();

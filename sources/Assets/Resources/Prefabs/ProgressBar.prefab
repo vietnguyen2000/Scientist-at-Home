@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 28.150146, y: -173.30005}
+  m_AnchoredPosition: {x: 24, y: -229}
   m_SizeDelta: {x: 122.4, y: 7.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3179473062309276972
@@ -176,10 +176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gradient:
     serializedVersion: 2
-    key0: {r: 0.6, g: 0.18039216, b: 0.3254902, a: 1}
-    key1: {r: 0.6, g: 0.34901962, b: 0.18039216, a: 1}
-    key2: {r: 0.7019608, g: 0.5686275, b: 0.1764706, a: 0}
-    key3: {r: 0.22352943, g: 0.6, b: 0.18039216, a: 0}
+    key0: {r: 0.9622642, g: 0.040850822, b: 0.35947022, a: 1}
+    key1: {r: 0.79530656, g: 0.8301887, b: 0.043075833, a: 1}
+    key2: {r: 0.8214613, g: 0.8396226, b: 0.09109115, a: 0}
+    key3: {r: 0.3077738, g: 0.9245283, b: 0.18752226, a: 0}
     key4: {r: 0.22352943, g: 0.6, b: 0.18039216, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
     ctime1: 14264
     ctime2: 34502
     ctime3: 51850
-    ctime4: 65535
+    ctime4: 51850
     ctime5: 0
     ctime6: 0
     ctime7: 0

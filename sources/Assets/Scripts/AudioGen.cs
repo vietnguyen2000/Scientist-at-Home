@@ -15,6 +15,7 @@ public class AudioGen : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    //-------------------------------------Scene1---------------------------------------------------------
     public void BubbleBreak()
     {
         AudioClip clip = GetRandomClip();
@@ -23,20 +24,27 @@ public class AudioGen : MonoBehaviour
 
     private AudioClip GetRandomClip()
     {
+        Debug.Log("Clips length: " + clips.Length);
         return clips[UnityEngine.Random.Range(0, clips.Length)];
-    }
-
-    public void Update()
-    {
-        if (Flag == true)
-        {
-            Flag = false;
-            BubbleBreak();
-        }
     }
 
     //public void Start()
     //{
     //    BubbleBreak();
     //}
+
+    //--------------------------------------Scene 2-------------------------------------------------------
+    public int index = 0;
+    public void KeyBoard()
+    {
+        AudioClip clip = clips[index%(clips.Length - 1)];
+        audioSource.PlayOneShot(clip);
+        index++;
+    }
+
+    //The last element of the AudioClips list
+    public void SpaceBar()
+    {
+        AudioClip clip = clips[clips.Length];
+    }
 }

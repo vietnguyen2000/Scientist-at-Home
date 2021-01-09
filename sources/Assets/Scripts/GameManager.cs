@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Camera camera;
     public ProgressBar progressBar;
     public ObjectPooler pool;
 
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         progressBar = FindObjectOfType<ProgressBar>();
+        camera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame

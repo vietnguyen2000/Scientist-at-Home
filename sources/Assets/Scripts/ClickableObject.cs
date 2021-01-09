@@ -16,7 +16,7 @@ public abstract class ClickableObject : MyObject
         animator = GetComponentInChildren<Animator>();
     }
 
-    private void OnEnable() {
+    protected virtual void OnEnable() {
         isClicked = false;
     }
 
@@ -26,15 +26,19 @@ public abstract class ClickableObject : MyObject
         base.Update();
         for (int i = 0 ; i < Input.touchCount; i++)
         {
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
-            pos = new Vector3(pos.x,pos.y,0);
-            if (col.bounds.Contains(pos) && !isClicked){
-                UpdateProgress();
-                isClicked = true;
-            }               
+            if (Input.GetTouch(i).phase == TouchPhase.Began){
+                Vector3 pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
+                pos = new Vector3(pos.x,pos.y,0);
+                if (col.OverlapPoint(pos) && !isClicked){
+                    
+                    UpdateProgress();
+                    isClicked = true;
+                }               
+            }
+            
         }
     }
-    virtual protected IEnumerator DisableAfterTime(string name)
+    protected virtual IEnumerator DisableAfterAnimationState(string name)
     {
         yield return 0;
         while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){

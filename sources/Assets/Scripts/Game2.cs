@@ -8,21 +8,49 @@ public class Game2 : MonoBehaviour
     public float BoomRate = 0.2f;
     private GameManager gameManager;
     public GameObject Boom;
+    public Animator monitor;
+    public Animator keyboard;
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
     }
-
+    float lastTimeTouch;
+    float speed;
     // Update is called once per frame
     void Update()
     {
         for (int i = 0 ; i < Input.touchCount; i ++){
-            if (Input.touches[i].phase == TouchPhase.Began){
+            Debug.Log(Input.touches[i].phase);
+            if (Input.touches[i].phase is TouchPhase.Began){
+                Debug.Log(Time.time - lastTimeTouch);
+                if (Time.time - lastTimeTouch <= 0.8f){
+                    speed = 1;
+                }
+                lastTimeTouch = Time.time;
+                Vector3 pos = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+                pos = new Vector3(pos.x,pos.y,0);
                 gameManager.progressBar.Increment(value);
+                
                 float x = Random.Range(0.0f,1.0f);
-
+                if (x <= BoomRate){
+                    StartCoroutine(createBoom(pos));
+                    
+                }
             }
         }
+        
+        if(speed > 0)
+            speed -= Time.deltaTime;
+        Debug.Log(speed);
+        monitor.SetFloat("speed",speed);
+        keyboard.SetFloat("speed",speed);
+    }
+    IEnumerator createBoom(Vector3 pos){
+        yield return null;
+        yield return null;
+        GameObject boom = gameManager.pool.Instantiate(Boom);
+        boom.transform.position = pos;
     }
 }

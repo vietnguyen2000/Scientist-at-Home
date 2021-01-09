@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 5
   BoomRate: 0.2
-  Boom: {fileID: 0}
+  Boom: {fileID: 7110688054702679719, guid: 14c1960fa0d21764c8d4a1561ce0c67d, type: 3}
 --- !u!4 &617797961
 Transform:
   m_ObjectHideFlags: 0

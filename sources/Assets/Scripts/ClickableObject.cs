@@ -28,7 +28,7 @@ public abstract class ClickableObject : MyObject
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
             pos = new Vector3(pos.x,pos.y,0);
-            if (col.bounds.Contains(pos) && !isClicked){
+            if (col.OverlapPoint(pos) && !isClicked){
                 UpdateProgress();
                 isClicked = true;
             }               

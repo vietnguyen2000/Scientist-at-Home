@@ -21,7 +21,10 @@ public class Game2 : MonoBehaviour
             if (Input.touches[i].phase == TouchPhase.Began){
                 gameManager.progressBar.Increment(value);
                 float x = Random.Range(0.0f,1.0f);
-
+                if (x <= BoomRate){
+                    GameObject boom = gameManager.pool.Instantiate(Boom);
+                    boom.transform.position = Camera.main.ScreenToWorldPoint(Input.touches[i].position) + new Vector3(0,0,10.0f);
+                }
             }
         }
     }

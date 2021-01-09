@@ -32,11 +32,11 @@ public class GameManager : MonoBehaviour
 
     public void lose()
     {
-
+        Debug.Log("Lose");
     }
 
     public void win()
     {
-        
+        Debug.Log("Win");
     }
 }

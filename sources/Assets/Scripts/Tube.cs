@@ -16,7 +16,9 @@ public class Tube : DragWindow, IPointerUpHandler
 
     public Image spriteColor;
     public Collider2D coll;
-    [SerializeField] public Color finalColor;
+    public Color finalColor;
+    static private bool initColor = true;
+    public Vector3 initPos = new Vector3(93, 264, 0);
 
     public GameManager GameManager{
         get=>gameManager;
@@ -24,12 +26,21 @@ public class Tube : DragWindow, IPointerUpHandler
     protected GameManager gameManager;
 
     public Color Merge(Color color1, Color color2){
-        return color1 + color2;
+        if (color2.r != 0)    {
+            return new Color(color1.r, color1.g - (float)64/255, color1.b - (float)64/255);
+        }
+        else if (color2.g != 0)    {
+            return new Color(color1.r - (float)64/255, color1.g, color1.b - (float)64/255);
+        }
+        else    {
+            return new Color(color1.r - (float)64/255, color1.g - (float)64/255, color1.b);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        initColor = true;
         gameManager = (GameManager)FindObjectOfType<GameManager>();
         
         if (mainTube == null)
@@ -43,22 +54,22 @@ public class Tube : DragWindow, IPointerUpHandler
     }
 
     private bool notObtainable(Color currColor, Color wantedColor)  {
-        if (currColor.r > wantedColor.r || currColor.g > wantedColor.g || currColor.b > wantedColor.b)  {
-            return false;
+        if (currColor.r < wantedColor.r || currColor.g < wantedColor.g || currColor.b < wantedColor.b)  {
+            return true;
         }
-        return true;
+        return false;
     }
 
     private bool obtainedColor(Color currColor, Color wantedColor)  {
-        if (currColor.r == wantedColor.r || currColor.g == wantedColor.g || currColor.b == wantedColor.b)  {
-            return false;
+        if (currColor.r == wantedColor.r && currColor.g == wantedColor.g && currColor.b == wantedColor.b)  {
+            return true;
         }
-        return true;
+        return false;
     }
 
     void Update()
     {
-        if (notObtainable(mainTube.spriteColor.color, finalColor))    {
+        if (!initColor && notObtainable(mainTube.spriteColor.color, finalColor))    {
             gameManager.lose();
         }
         else if (obtainedColor(mainTube.spriteColor.color, finalColor))   {
@@ -67,7 +78,8 @@ public class Tube : DragWindow, IPointerUpHandler
     }
 
     private bool ableToMerge(Color color1, Color color2){
-        if (color1.r + color2.r >= 255 || color1.g + color2.g >= 255 || color1.b + color2.b >= 255)   {
+        Color checkColor = Merge(color1, color2);
+        if (checkColor.r < 0 || checkColor.g < 0 || checkColor.b < 0)   {
             return false;
         }
         return true;
@@ -80,17 +92,17 @@ public class Tube : DragWindow, IPointerUpHandler
         {
             if (coll.OverlapPoint(mainTube.transform.position))
             {
-                if (ableToMerge(spriteColor.color, mainTube.spriteColor.color)) {
+                if (ableToMerge(mainTube.spriteColor.color, spriteColor.color)) {
                     //Merge color
-                    Color mergedColor = Merge(spriteColor.color, mainTube.spriteColor.color);
+                    Color mergedColor = Merge(mainTube.spriteColor.color, spriteColor.color);
                     mainTube.spriteColor.color = mergedColor;
+                    initColor = false;
 
-                    //Delete the tube
-                    spriteColor.gameObject.SetActive(false);
+                    // //Delete the tube
+                    spriteColor.gameObject.transform.position = initPos;
+                    // spriteColor.gameObject.SetActive(false);
                     Image spriteParent = spriteColor.GetComponentInParent<Image>();
-                    spriteParent.gameObject.SetActive(false);
-
-                    checkIfFinalColor();
+                    spriteParent.gameObject.transform.position = initPos;
                 }
                 else
                 {

@@ -39,4 +39,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Win");
     }
+
+    public void lose()  {
+        
+    }
 }

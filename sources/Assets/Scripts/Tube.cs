@@ -59,12 +59,27 @@ public class Tube : DragWindow, IPointerUpHandler
         }
         return false;
     }
+<<<<<<< HEAD
 
     private bool obtainedColor(Color currColor, Color wantedColor)  {
         if (currColor.r == wantedColor.r && currColor.g == wantedColor.g && currColor.b == wantedColor.b)  {
             return true;
         }
         return false;
+=======
+    
+    // When 2 Game object collided
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        // Debug.Log("OnCollisionEnter2D");
+        // Debug.Log(col.gameObject);
+        // Check 2 tube collapsed:
+        // if (this.endDrag == 1 && col.gameObject is BigTube)  {
+        //     this.gameObject.SetActive(false);
+        //     // gameManager.updateBigTubeColor(Merge(this.gameObject.color, col.gameObject.color));
+        // }
+        // this.endDrag = 0;
+>>>>>>> CountdownTimer
     }
 
     void Update()

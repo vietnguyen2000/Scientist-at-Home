@@ -14,8 +14,8 @@ public class DragWindow : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     public void OnBeginDrag(PointerEventData eventData)
     {
         //Change background color to sth faded
-        backgroundColor.a = .4f;
-        backgroundImage.color = backgroundColor;
+        //backgroundColor.a = .4f;
+        //backgroundImage.color = backgroundColor;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -27,8 +27,8 @@ public class DragWindow : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     public void OnEndDrag(PointerEventData eventData)
     {
         //Change color back to normal
-        backgroundColor.a = 1f;
-        backgroundImage.color = backgroundColor;
+        //backgroundColor.a = 1f;
+        //backgroundImage.color = backgroundColor;
     }
 
     public void OnPointerDown(PointerEventData eventData)

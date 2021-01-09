@@ -40,11 +40,11 @@ public class Tube : MonoBehaviour
         // Debug.Log("OnCollisionEnter2D");
         // Debug.Log(col.gameObject);
         // Check 2 tube collapsed:
-        if (this.endDrag == 1 && col.gameObject is BigTube)  {
-            this.gameObject.SetActive(false);
-            gameManager.updateBigTubeColor(Merge(this.gameObject.color, col.gameObject.color));
-        }
-        this.endDrag = 0;
+        // if (this.endDrag == 1 && col.gameObject is BigTube)  {
+        //     this.gameObject.SetActive(false);
+        //     // gameManager.updateBigTubeColor(Merge(this.gameObject.color, col.gameObject.color));
+        // }
+        // this.endDrag = 0;
     }
 
     void OnMouseDown()

@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 678299915
+    locked: 0
+  - name: Wall
+    uniqueID: 2244182469
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bubble
+    uniqueID: 1972277427
+    locked: 0
+  - name: Top
+    uniqueID: 4185311423
     locked: 0

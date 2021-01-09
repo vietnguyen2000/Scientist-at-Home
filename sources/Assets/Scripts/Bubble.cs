@@ -2,23 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class Bubble : ClickableObject
+public abstract class Bubble : ClickableObject
 {
-    // Start is called before the first frame update
+    public Rigidbody2D vec;
+    public Vector2 force;
+
     protected override void Start()
     {
+        this.vec = this.GetComponent<Rigidbody2D>();
         base.Start();
     }
-
-
 
     // Update is called once per frame
     protected override void Update()
     {
-        base.Start();
+        this.vec.AddForce(this.force);
+        base.Update();
     }
-    public override void OnPointerClick(PointerEventData pointerEventData)
+    protected override void UpdateProgress()
     {
-        base.Start();
+        animator.Play("BubbleBreak",0);
+        StartCoroutine(DisableAfterTime("BubbleBreak"));
+
     }
+    IEnumerator DisableAfterTime(string name)
+    {
+        yield return 0;
+        while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){
+            yield return null;
+        }
+        gameObject.SetActive(false);
+     }
 }

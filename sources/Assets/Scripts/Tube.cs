@@ -37,6 +37,12 @@ public class Tube : DragWindow, IPointerUpHandler
         }
     }
 
+    protected override void Awake()
+    {
+        base.Awake();
+        initPos = this.transform.localPosition;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,10 +105,10 @@ public class Tube : DragWindow, IPointerUpHandler
                     initColor = false;
 
                     // //Delete the tube
-                    spriteColor.gameObject.transform.position = initPos;
-                    // spriteColor.gameObject.SetActive(false);
+                    spriteColor.gameObject.SetActive(false);
                     Image spriteParent = spriteColor.GetComponentInParent<Image>();
-                    spriteParent.gameObject.transform.position = initPos;
+                    spriteParent.gameObject.transform.localPosition = initPos;
+                    spriteColor.gameObject.SetActive(true);
                 }
                 else
                 {

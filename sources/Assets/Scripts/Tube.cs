@@ -20,6 +20,8 @@ public class Tube : DragWindow, IPointerUpHandler
     static private bool initColor = true;
     public Vector3 initPos = new Vector3(93, 264, 0);
 
+    public AudioSource audioSource = null;
+
     public Game3Manager Game3Manager{
         get=>game3Manager;
     }
@@ -42,15 +44,7 @@ public class Tube : DragWindow, IPointerUpHandler
         base.Awake();
         virus.Init();
         initPos = this.transform.localPosition;
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        initColor = true;
-        game3Manager = (Game3Manager)FindObjectOfType<Game3Manager>();
-        virus = FindObjectOfType<PixArt>();
-        
         if (mainTube == null)
         {
             Debug.Log("mainTube is null");
@@ -59,6 +53,20 @@ public class Tube : DragWindow, IPointerUpHandler
         {
             coll = GetComponent<Collider2D>();
         }
+
+        if (mainTube != spriteColor.GetComponentInParent<Tube>())
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        initColor = true;
+        game3Manager = (Game3Manager)FindObjectOfType<Game3Manager>();
+        virus = FindObjectOfType<PixArt>();
+       
     }
 
     private bool obtainable(Color currColor, Color wantedColor)  {
@@ -93,6 +101,10 @@ public class Tube : DragWindow, IPointerUpHandler
         Color checkColor = Merge(color1, color2);
         if (checkColor.r < 0 || checkColor.g < 0 || checkColor.b < 0)   {
             return false;
+        }
+        if (audioSource != null)
+        {
+            audioSource.Play();
         }
         return true;
     }

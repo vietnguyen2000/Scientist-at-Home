@@ -45,7 +45,20 @@ public class AudioGen : MonoBehaviour
     //The last element of the AudioClips list
     public void SpaceBar()
     {
-        AudioClip clip = clips[clips.Length];
+        AudioClip clip = clips[clips.Length - 1];
+        audioSource.PlayOneShot(clip);
+    }
+
+    //--------------------------------------Start game red timer-------------------------------------------
+    public void RedTimerNormal()
+    {
+        AudioClip clip = clips[0];
+        audioSource.PlayOneShot(clip);
+    }
+
+    public void RedTimerEnd()
+    {
+        AudioClip clip = clips[clips.Length - 1];
         audioSource.PlayOneShot(clip);
     }
 }

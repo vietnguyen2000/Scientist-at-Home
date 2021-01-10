@@ -15,6 +15,18 @@ Your goal is to help the scientist with his day-to-day activities and works, to 
 <img src="sources/Assets/Resources/Screenshots/game1.jpg" alt="game1" height="500"/>
 <img src="sources/Assets/Resources/Screenshots/game2.png" alt="game2" height="500"/>
 
+## Project structure
+
+```
+.
+├── builds
+    └── apk             # Android installation file
+└── sources             # Unity sources
+    ├── Assets          # multimedia assets
+    ├── Packages        # Unity packages
+    └── ProjectSettings # specific settings for this project
+```
+
 ## Sources
 
 All visuals and audios in this game and project are ours or obtained free and with the approved to use from sources over the Internet

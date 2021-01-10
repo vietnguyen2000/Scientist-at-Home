@@ -6,6 +6,7 @@ public class PixArt : MonoBehaviour
 {
     Texture2D texture;
     Sprite sprite;
+    AudioSource audioSource;
     private Vector3 _originalPos;
     public void RemoveColor(Color color)
     {
@@ -19,6 +20,7 @@ public class PixArt : MonoBehaviour
         this.texture.SetPixels(colors);
         this.texture.Apply();
         StartCoroutine(cShake(0.3f,0.3f));
+        audioSource.Play();
     }
 
     public Color[] Remain()
@@ -63,6 +65,7 @@ public class PixArt : MonoBehaviour
     {
         this.Init();
         _originalPos = transform.localPosition;
+        audioSource = GetComponent<AudioSource>();
     }
     public IEnumerator cShake (float duration, float amount) {
         float startTime = Time.time;

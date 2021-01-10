@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: 7e0284b303577f24abfebece1feb72ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2034893817973878027
+    second: ThreeCountdownSheet_0
+  - first:
+      213: 3622010866692081350
+    second: ThreeCountdownSheet_1
+  - first:
+      213: 8538775813565554112
+    second: ThreeCountdownSheet_2
+  - first:
+      213: -4727141683073963992
+    second: ThreeCountdownSheet_3
+  - first:
+      213: 971141711177657215
+    second: ThreeCountdownSheet_4
+  - first:
+      213: 7492137348677709264
+    second: ThreeCountdownSheet_5
+  - first:
+      213: -6934723802304884534
+    second: ThreeCountdownSheet_6
+  - first:
+      213: 8957043313243639180
+    second: ThreeCountdownSheet_7
+  - first:
+      213: -6328538052457916806
+    second: ThreeCountdownSheet_8
+  - first:
+      213: -7379537279537080299
+    second: ThreeCountdownSheet_9
+  - first:
+      213: -1163549516190366921
+    second: ThreeCountdownSheet_10
+  - first:
+      213: -8654207067626226284
+    second: ThreeCountdownSheet_11
+  - first:
+      213: -3433664780583416105
+    second: ThreeCountdownSheet_0
+  - first:
+      213: 8510591515193862263
+    second: ThreeCountdownSheet_1
+  - first:
+      213: 5895066530254032238
+    second: ThreeCountdownSheet_4
+  - first:
+      213: 5418278868316762328
+    second: ThreeCountdownSheet_5
+  - first:
+      213: -2794468108695926245
+    second: ThreeCountdownSheet_8
+  - first:
+      213: 1716097254369858515
+    second: ThreeCountdownSheet_9
+  - first:
+      213: 8594403516346596425
+    second: ThreeCountdownSheet_2
+  - first:
+      213: 6991703734211804550
+    second: ThreeCountdownSheet_3
+  - first:
+      213: -5342703872399390131
+    second: ThreeCountdownSheet_6
+  - first:
+      213: -71532426649816901
+    second: ThreeCountdownSheet_7
+  - first:
+      213: 107884472265696673
+    second: ThreeCountdownSheet_10
+  - first:
+      213: -3245251437017314337
+    second: ThreeCountdownSheet_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de4e8b031c2950d0800000000000000
+      internalID: -3433664780583416105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 76
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778659b54e1bb1670800000000000000
+      internalID: 8510591515193862263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d061f96cb7fc150800000000000000
+      internalID: 5895066530254032238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 38
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0b6086ce7913b40800000000000000
+      internalID: 5418278868316762328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a85059f0e0839d0800000000000000
+      internalID: -2794468108695926245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_9
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d31dbe4c5dc0d710800000000000000
+      internalID: 1716097254369858515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 76
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cf4388674754770800000000000000
+      internalID: 8594403516346596425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 76
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d777ca085870160800000000000000
+      internalID: 6991703734211804550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 38
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ac7898227ead5b0800000000000000
+      internalID: -5342703872399390131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 38
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0bd9f03add10ff0800000000000000
+      internalID: -71532426649816901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_10
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a56d2e1b584f7100800000000000000
+      internalID: 107884472265696673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThreeCountdownSheet_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbc1c9130d86f2d0800000000000000
+      internalID: -3245251437017314337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

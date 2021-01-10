@@ -10,13 +10,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("10");
         pool = new ObjectPooler();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         progressBar = FindObjectOfType<ProgressBar>();
         camera = FindObjectOfType<Camera>();
     }

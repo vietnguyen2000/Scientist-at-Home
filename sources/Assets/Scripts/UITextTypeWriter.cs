@@ -7,13 +7,13 @@ using UnityEngine.EventSystems;
 public class UITextTypeWriter : MonoBehaviour, IPointerClickHandler
 {
 
-	protected Text txt;
+	public Text txt;
     public float secsPerText = 0.025f;
 	string story;
-    bool skip;
-	void Awake () 
+    protected bool skip;
+	protected virtual void Awake () 
 	{
-		txt = GetComponent<Text> ();
+		if(txt == null) txt = GetComponent<Text>();
 		story = txt.text;
 		txt.text = "";
 

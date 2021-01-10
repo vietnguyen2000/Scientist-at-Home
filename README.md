@@ -5,7 +5,7 @@ Source code of an Android game made with Unity to compete in [Gameloft Game Jam 
 
 ## About this game
 
-Scientist at Home is an Android game set in the scenario with a worldwide pandemic. You are a scientist who specialised in virus research,and is working in a world famous laboratory. But now because of the pandemic, you are forced work from home.
+Scientist at Home is an Android game set in the scenario with a worldwide pandemic. You are a scientist who specialised in virus research, and is working in a world famous laboratory. But now because of the pandemic, you are forced work from home.
 
 Your goal is to help the scientist with his day-to-day activities and works, to find the cure for the virus which created all this mess and set the world back to its normal state!
 

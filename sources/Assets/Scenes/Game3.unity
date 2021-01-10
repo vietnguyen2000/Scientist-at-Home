@@ -259,8 +259,8 @@ RectTransform:
   - {fileID: 301631365}
   - {fileID: 764785255}
   - {fileID: 1435187433}
-  - {fileID: 585748953}
   - {fileID: 1986151785}
+  - {fileID: 585748953}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -456,6 +456,7 @@ MonoBehaviour:
   spriteColor: {fileID: 216392152}
   coll: {fileID: 0}
   finalColor: {r: 0, g: 0, b: 0, a: 0}
+  virus: {fileID: 0}
   initPos: {x: 93, y: 264, z: 0}
 --- !u!222 &301631369
 CanvasRenderer:
@@ -627,12 +628,12 @@ RectTransform:
   m_Children:
   - {fileID: 752898759}
   m_Father: {fileID: 154126227}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 341.1, y: -0.0000038147}
-  m_SizeDelta: {x: 71.802, y: 71.8}
+  m_AnchoredPosition: {x: 341, y: -187}
+  m_SizeDelta: {x: 82, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &585748954
 BoxCollider2D:
@@ -678,7 +679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f67cf976092c7b749b8e07b25949cc7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -707,6 +708,7 @@ MonoBehaviour:
   spriteColor: {fileID: 752898760}
   coll: {fileID: 0}
   finalColor: {r: 0, g: 0, b: 0, a: 0}
+  virus: {fileID: 0}
   initPos: {x: 93, y: 264, z: 0}
 --- !u!222 &585748957
 CanvasRenderer:
@@ -771,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c5ef334b430c1354dacccf11ff6fb7f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -828,6 +830,7 @@ MonoBehaviour:
   spriteColor: {fileID: 2143526034}
   coll: {fileID: 0}
   finalColor: {r: 0.7490196, g: 0.7490196, b: 1, a: 0}
+  virus: {fileID: 0}
   initPos: {x: 93, y: 264, z: 0}
 --- !u!58 &764785252
 CircleCollider2D:
@@ -842,9 +845,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.853416, y: -0.73431027}
+  m_Offset: {x: 0.5571154, y: -0.7343123}
   serializedVersion: 2
-  m_Radius: 73.77278
+  m_Radius: 75.18331
 --- !u!114 &764785253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,7 +866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 535c006c669b3c14bbb86546c9077064, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -898,8 +901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 0.0000038147}
-  m_SizeDelta: {x: 166.27, y: 166.26}
+  m_AnchoredPosition: {x: -0.000030518, y: -390}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1003903864
 GameObject:
@@ -1015,8 +1018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 341.09998, y: 90.1}
-  m_SizeDelta: {x: 71.8, y: 71.8}
+  m_AnchoredPosition: {x: 341, y: 215}
+  m_SizeDelta: {x: 82, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1435187434
 BoxCollider2D:
@@ -1062,7 +1065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f67cf976092c7b749b8e07b25949cc7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1091,6 +1094,7 @@ MonoBehaviour:
   spriteColor: {fileID: 1622964636}
   coll: {fileID: 0}
   finalColor: {r: 0, g: 0, b: 0, a: 0}
+  virus: {fileID: 0}
   initPos: {x: 93, y: 264, z: 0}
 --- !u!222 &1435187437
 CanvasRenderer:
@@ -1155,7 +1159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c5ef334b430c1354dacccf11ff6fb7f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1228,7 +1232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c5ef334b430c1354dacccf11ff6fb7f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1362,12 +1366,12 @@ RectTransform:
   m_Children:
   - {fileID: 1523072009}
   m_Father: {fileID: 154126227}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 341.1, y: -94.23}
-  m_SizeDelta: {x: 71.801, y: 71.8}
+  m_AnchoredPosition: {x: 341, y: 15}
+  m_SizeDelta: {x: 82, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1986151786
 BoxCollider2D:
@@ -1413,7 +1417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f67cf976092c7b749b8e07b25949cc7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1442,6 +1446,7 @@ MonoBehaviour:
   spriteColor: {fileID: 1523072010}
   coll: {fileID: 0}
   finalColor: {r: 0, g: 0, b: 0, a: 0}
+  virus: {fileID: 0}
   initPos: {x: 93, y: 264, z: 0}
 --- !u!222 &1986151789
 CanvasRenderer:
@@ -1554,7 +1559,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: e3d7ce0246ecf1542a8683014d86d913, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1604,6 +1609,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

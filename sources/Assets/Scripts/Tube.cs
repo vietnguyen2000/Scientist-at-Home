@@ -77,12 +77,6 @@ public class Tube : DragWindow, IPointerUpHandler
 
     void Update()
     {
-        // if (!initColor && notObtainable(mainTube.spriteColor.color, finalColor))    {
-        //     gameManager.lose();
-        // }
-        // else if (obtainedColor(mainTube.spriteColor.color, finalColor))   {
-        //     gameManager.win();
-        // }
         bool winnable = initColor;
         foreach (Color virusColor in virus.Remain())
         {

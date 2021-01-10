@@ -365,6 +365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3567241195473683241, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.707
+      objectReference: {fileID: 0}
     - target: {fileID: 3567241195473683243, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -514,11 +519,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 542.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567241195977971173, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3567241196041667416, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
         type: 3}

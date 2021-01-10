@@ -1022,6 +1022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLose
       objectReference: {fileID: 0}
+    - target: {fileID: 3567241195698530428, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 012b48fb53eb2cc4ebe6321ccc67789d, type: 3}
 --- !u!1001 &852556499

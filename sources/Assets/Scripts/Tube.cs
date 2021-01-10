@@ -18,7 +18,7 @@ public class Tube : DragWindow, IPointerUpHandler
     public Collider2D coll;
     public PixArt virus;
     static private bool initColor = true;
-    public Vector3 initPos = new Vector3(93, 264, 0);
+    public Vector2 initPos;
 
     public AudioSource audioSource = null;
 
@@ -43,7 +43,7 @@ public class Tube : DragWindow, IPointerUpHandler
     {
         base.Awake();
         virus.Init();
-        initPos = this.transform.localPosition;
+        initPos = GetComponent<RectTransform>().anchoredPosition;
 
         if (mainTube == null)
         {
@@ -125,7 +125,7 @@ public class Tube : DragWindow, IPointerUpHandler
                     // Move the tube back to original position:
                     spriteColor.gameObject.SetActive(false);
                     Image spriteParent = spriteColor.GetComponentInParent<Image>();
-                    spriteParent.gameObject.transform.localPosition = initPos;
+                    GetComponent<RectTransform>().anchoredPosition = initPos;
                     spriteColor.gameObject.SetActive(true);
                     
                     bool winnable = initColor;

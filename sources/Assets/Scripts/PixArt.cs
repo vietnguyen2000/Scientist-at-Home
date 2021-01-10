@@ -35,7 +35,6 @@ public class PixArt : MonoBehaviour
         Color[] colors = this.sprite.texture.GetPixels();
         foreach (Color color in colors)
             if (color != Color.white) return false;
-
         return true;
     }
 
@@ -55,6 +54,13 @@ public class PixArt : MonoBehaviour
     private void Awake()
     {
         this.Init();
+
+        Color[] colors = this.sprite.texture.GetPixels();
+        for (int i = 0; i<(int)colors.Length/2; i++)
+            colors[i] = new Color(1 - (float)1/4, 1 - (float)1/4, 1);
+        for (int i = (int)colors.Length/2; i<(int)colors.Length; i++)
+            colors[i] = new Color(1 - (float)1/4, 1, 1 - (float)1/4);
+        this.texture.SetPixels(colors);
     }
     /*    
     int count = 0;

@@ -16,15 +16,14 @@ public class Tube : DragWindow, IPointerUpHandler
 
     public Image spriteColor;
     public Collider2D coll;
-    public Color finalColor;
     public PixArt virus;
     static private bool initColor = true;
     public Vector3 initPos = new Vector3(93, 264, 0);
 
-    public GameManager GameManager{
-        get=>gameManager;
+    public Game3Manager Game3Manager{
+        get=>game3Manager;
     }
-    protected GameManager gameManager;
+    protected Game3Manager game3Manager;
 
     public Color Merge(Color color1, Color color2){
         if (color2.r != 0)    {
@@ -49,7 +48,7 @@ public class Tube : DragWindow, IPointerUpHandler
     void Start()
     {
         initColor = true;
-        gameManager = (GameManager)FindObjectOfType<GameManager>();
+        game3Manager = (Game3Manager)FindObjectOfType<Game3Manager>();
         virus = FindObjectOfType<PixArt>();
         
         if (mainTube == null)
@@ -70,36 +69,24 @@ public class Tube : DragWindow, IPointerUpHandler
     }
 
     private bool obtainedColor(Color currColor, Color wantedColor)  {
-        if (currColor.r == wantedColor.r && currColor.g == wantedColor.g && currColor.b == wantedColor.b)  {
+        if (Mathf.Abs(currColor.r - wantedColor.r) < 0.1 && Mathf.Abs(currColor.g - wantedColor.g) <0.1 && Mathf.Abs(currColor.b - wantedColor.b) < 0.1)  {
             return true;
         }
         return false;
     }
 
+    private IEnumerator delay() {
+        yield return new WaitForSeconds(2);
+        mainTube.spriteColor.color = new Color(1, 1, 1);
+    }
+
+    private void updateColor()  {
+        Debug.Log("Hiệu ứng gì đó cho biết m đã làm mất được một màu của virus");
+        StartCoroutine(delay());
+    }
+
     void Update()
     {
-        bool winnable = initColor;
-        foreach (Color virusColor in virus.Remain())
-        {
-            if (obtainedColor(mainTube.spriteColor.color, virusColor))
-            {
-                virus.RemoveColor(virusColor);
-                winnable = true;
-            }
-            //NOTE: Mỗi lần chơi chỉ cần tìm được 1 màu của con virus, sau đó lọ màu sẽ được reset
-            else if (obtainable(mainTube.spriteColor.color, virusColor))
-            {
-                winnable = true;
-            }
-        }
-        if (!winnable)
-        {
-            gameManager.lose();
-        }
-        if (virus.AllWhite())
-        {
-            gameManager.win();
-        }
     }
 
     private bool ableToMerge(Color color1, Color color2){
@@ -115,7 +102,7 @@ public class Tube : DragWindow, IPointerUpHandler
         // If the dragged to window is the mainTube:
         if (mainTube != spriteColor.GetComponentInParent<Tube>())
         {
-            if (coll.OverlapPoint(mainTube.transform.position))
+            if (mainTube.GetComponentInChildren<Collider2D>().OverlapPoint(transform.position))
             {
                 if (ableToMerge(mainTube.spriteColor.color, spriteColor.color)) {
                     //Merge color:
@@ -128,6 +115,34 @@ public class Tube : DragWindow, IPointerUpHandler
                     Image spriteParent = spriteColor.GetComponentInParent<Image>();
                     spriteParent.gameObject.transform.localPosition = initPos;
                     spriteColor.gameObject.SetActive(true);
+                    
+                    bool winnable = initColor;
+                    // Debug.Log(mainTube.spriteColor.color.b);
+                    foreach (Color virusColor in virus.Remain())
+                    {
+                        if (obtainedColor(mainTube.spriteColor.color, virusColor))
+                        {
+                            // Debug.Log(mainTube.spriteColor.color.r);
+                            // Debug.Log(virusColor.r);
+                            winnable = true;
+                            virus.RemoveColor(virusColor);
+                            updateColor();
+                            break;
+                        }
+                        //NOTE: Mỗi lần chơi chỉ cần tìm được 1 màu của con virus, sau đó lọ màu sẽ được reset
+                        else if (obtainable(mainTube.spriteColor.color, virusColor))
+                        {
+                            winnable = true;
+                        }
+                    }
+                    if (!winnable)
+                    {
+                        game3Manager.lose();
+                    }
+                    if (virus.AllWhite())
+                    {
+                        game3Manager.win();
+                    }
                 }
                 else
                 {

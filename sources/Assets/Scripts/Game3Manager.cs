@@ -30,6 +30,7 @@ public class Game3Manager : MonoBehaviour
 
     public void win()
     {
+        Debug.Log("Win");
         for (int i = 0; i < disableObject.Length; i++)
         {
             disableObject[i].SetActive(false);

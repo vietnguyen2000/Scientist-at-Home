@@ -46,5 +46,6 @@ public class AudioGen : MonoBehaviour
     public void SpaceBar()
     {
         AudioClip clip = clips[clips.Length];
+        audioSource.PlayOneShot(clip);
     }
 }

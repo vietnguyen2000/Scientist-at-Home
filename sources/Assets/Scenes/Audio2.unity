@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3179473063463249621, guid: 74e94f061a807644f84ebec24ffd31b3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -173.2998
+      objectReference: {fileID: 0}
     - target: {fileID: 3179473063659109733, guid: 74e94f061a807644f84ebec24ffd31b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -555,8 +560,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48cca246f0ccf994097df0b32a13df6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
   camera: {fileID: 0}
   progressBar: {fileID: 0}
+  TimePlay: {fileID: 0}
+  disableObject: []
+  winGameObject: {fileID: 0}
+  loseGameObject: {fileID: 0}
 --- !u!4 &992577451
 Transform:
   m_ObjectHideFlags: 0
@@ -790,7 +800,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ffa3aa68b58e72d478118a12232b7a20, type: 3}
   - {fileID: 8300000, guid: 8f5f084d5e2480e4a86e72596dba95c5, type: 3}
   - {fileID: 8300000, guid: eff901cdd3f453f4e9c2298c5ef0d925, type: 3}
-  - {fileID: 8300000, guid: 77f49857cfe74ce4682237692b756814, type: 3}
+  - {fileID: 8300000, guid: 2dc7a51c8d2d11f448840a415beac3af, type: 3}
   audioSource: {fileID: 0}
   Flag: 0
   index: 0

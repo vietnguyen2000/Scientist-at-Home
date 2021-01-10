@@ -11,9 +11,11 @@ Your goal is to help the scientist with his day-to-day activities and works, to 
 
 ## Screenshots
 
-<img src="sources/Assets/Resources/Screenshots/home_choose.png" alt="home" height="500"/>
-<img src="sources/Assets/Resources/Screenshots/game1.jpg" alt="game1" height="500"/>
+<img src="sources/Assets/Resources/Screenshots/choose.png" alt="choose" height="500"/>
+<img src="sources/Assets/Resources/Screenshots/game1.png" alt="game1" height="500"/>
 <img src="sources/Assets/Resources/Screenshots/game2.png" alt="game2" height="500"/>
+<img src="sources/Assets/Resources/Screenshots/game3.png" alt="game3" height="500"/>
+<img src="sources/Assets/Resources/Screenshots/overlay.png" alt="overlay" height="500"/>
 
 ## Project structure
 

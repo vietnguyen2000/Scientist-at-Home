@@ -42,7 +42,6 @@ public class Tube : DragWindow, IPointerUpHandler
     protected override void Awake()
     {
         base.Awake();
-        virus.Init();
         initPos = GetComponent<RectTransform>().anchoredPosition;
 
         if (mainTube == null)

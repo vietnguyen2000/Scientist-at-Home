@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PixArt : MonoBehaviour
 {
+    public Sprite[] listVirus;
     Texture2D texture;
     Sprite sprite;
     AudioSource audioSource;
@@ -63,6 +64,7 @@ public class PixArt : MonoBehaviour
 
     private void Awake()
     {
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = listVirus[Random.Range(0,listVirus.Length)];
         this.Init();
         _originalPos = transform.localPosition;
         audioSource = GetComponent<AudioSource>();

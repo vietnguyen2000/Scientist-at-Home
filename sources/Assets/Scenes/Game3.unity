@@ -368,10 +368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff44f8bc8b695c340a96e9e9407d4846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 3
   camera: {fileID: 0}
   timePlay: {fileID: 369554964}
-  disableObject: []
+  disableObject:
+  - {fileID: 154126223}
   winGameObject: {fileID: 952828889}
   loseGameObject: {fileID: 1872724183}
 --- !u!4 &133937056
@@ -624,6 +625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7006919434a9f1348bb239aa0b9dfd94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listVirus:
+  - {fileID: 21300000, guid: ce62a8a46e20b9c4b93c0133bdf4ea41, type: 3}
+  - {fileID: 21300000, guid: 6f0365a67347e524594ab46aea06ed35, type: 3}
+  - {fileID: 21300000, guid: 436a69f967d12cb449fcc5b0764d1ac2, type: 3}
 --- !u!212 &196401828
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -90,7 +90,7 @@ public class Tube : DragWindow, IPointerUpHandler
 
     private void updateColor()  {
         Debug.Log("Hiệu ứng gì đó");
-        StartCoroutine(delay());
+        mainTube.spriteColor.color = new Color(1, 1, 1);
     }
 
     void Update()
@@ -149,7 +149,7 @@ public class Tube : DragWindow, IPointerUpHandler
                     }
                     if (!winnable)
                     {
-                        updateColor();
+                        // updateColor();
                     }
                     if (virus.AllWhite())
                     {
@@ -162,5 +162,8 @@ public class Tube : DragWindow, IPointerUpHandler
                 }
             }
         }
+    }
+    public void RestartColor(){
+        color = Color.white;
     }
 }

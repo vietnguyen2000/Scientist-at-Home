@@ -58,5 +58,6 @@ public class GameManager : MonoBehaviour
         winGameObject.SetActive(true);
         SaveLoadManager.Instance.PassNewLevel(level);
         ChooseLevel.level = level+1;
+        TimePlay.timerIsRunning = false;
     }
 }

@@ -15,6 +15,7 @@ public class ChooseLevel : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        Debug.Log(Application.persistentDataPath);
         levelsRect = new RectTransform[levels.Length];
         rect = GetComponent<RectTransform>();
         int unlockedLevel = SaveLoadManager.Instance.SavedData.level;

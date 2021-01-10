@@ -6,6 +6,7 @@ public class PixArt : MonoBehaviour
 {
     Texture2D texture;
     Sprite sprite;
+    private Vector3 _originalPos;
     public void RemoveColor(Color color)
     {
         if (color == Color.white) return;
@@ -17,6 +18,7 @@ public class PixArt : MonoBehaviour
 
         this.texture.SetPixels(colors);
         this.texture.Apply();
+        StartCoroutine(cShake(0.3f,0.3f));
     }
 
     public Color[] Remain()
@@ -60,6 +62,21 @@ public class PixArt : MonoBehaviour
     private void Awake()
     {
         this.Init();
+        _originalPos = transform.localPosition;
+    }
+    public IEnumerator cShake (float duration, float amount) {
+        float startTime = Time.time;
+        float endTime = startTime + duration;
+
+        while (startTime < endTime && Time.timeScale > 0f) {
+            transform.localPosition = _originalPos + Random.insideUnitSphere * amount;
+
+            startTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.localPosition = _originalPos;
     }
     /*    
     int count = 0;

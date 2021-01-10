@@ -6,6 +6,7 @@ public class Game3Manager : MonoBehaviour
 {
     public int level;
     public Camera camera;
+    public CountdownTimer timePlay;
     public ObjectPooler pool;
 
     public GameObject[] disableObject;
@@ -37,5 +38,6 @@ public class Game3Manager : MonoBehaviour
         }
         winGameObject.SetActive(true);
         SaveLoadManager.Instance.PassNewLevel(level);
+        timePlay.timerIsRunning = false;
     }
 }

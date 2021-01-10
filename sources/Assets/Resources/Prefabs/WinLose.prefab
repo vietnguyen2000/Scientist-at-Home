@@ -480,7 +480,6 @@ GameObject:
   - component: {fileID: 3567241196041667422}
   - component: {fileID: 3567241196041667419}
   - component: {fileID: 3567241196041667416}
-  - component: {fileID: 3567241196041667417}
   - component: {fileID: 2419186689766173247}
   m_Layer: 5
   m_Name: Text
@@ -549,20 +548,6 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Ah! I don't think I found it this time. I am so cold now, maybe next time
     :(
---- !u!114 &3567241196041667417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3567241196041667423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3bd67ff4ef4ded40ac5fbfe8614fc7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txt: {fileID: 3567241196041667416}
-  secsPerText: 0.025
 --- !u!114 &2419186689766173247
 MonoBehaviour:
   m_ObjectHideFlags: 0

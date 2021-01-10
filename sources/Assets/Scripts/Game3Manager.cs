@@ -39,5 +39,6 @@ public class Game3Manager : MonoBehaviour
         winGameObject.SetActive(true);
         SaveLoadManager.Instance.PassNewLevel(level);
         timePlay.timerIsRunning = false;
+        ChooseLevel.level = 1;
     }
 }

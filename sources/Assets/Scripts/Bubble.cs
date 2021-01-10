@@ -20,10 +20,12 @@ public abstract class Bubble : ClickableObject
     // Update is called once per frame
     protected override void Update()
     {
-        this.vec.AddForce(this.force);
+        
         base.Update();
     }
-
+    private void FixedUpdate() {
+        this.vec.AddForce(this.force);
+    }
     protected override void UpdateProgress()
     {
         animator.Play("BubbleBreak", 0);

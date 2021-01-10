@@ -24,8 +24,11 @@ public class PixArt : MonoBehaviour
         Color[] colors = this.sprite.texture.GetPixels();
         Dictionary<Color, Color> dict = new Dictionary<Color, Color>();
         foreach (Color __color in colors)
-            if (__color != Color.white && !dict.ContainsKey(__color))
+            if(__color.a != 0){
+                if (__color != Color.white && !dict.ContainsKey(__color))
                 dict.Add(__color, __color);
+            }
+            
 
         return new List<Color>(dict.Values).ToArray();
     }
@@ -34,7 +37,9 @@ public class PixArt : MonoBehaviour
     {
         Color[] colors = this.sprite.texture.GetPixels();
         foreach (Color color in colors)
-            if (color != Color.white) return false;
+            if(color.a != 0){
+                if (color != Color.white) return false;
+            }
         return true;
     }
 
@@ -43,6 +48,7 @@ public class PixArt : MonoBehaviour
         this.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         Texture2D sprite_texture = this.sprite.texture;
         this.texture = new Texture2D(sprite_texture.width, sprite_texture.height, sprite_texture.format, false);
+        this.texture.filterMode = FilterMode.Point;
         this.texture.SetPixels(sprite_texture.GetPixels());
         this.texture.Apply();
 
@@ -54,13 +60,6 @@ public class PixArt : MonoBehaviour
     private void Awake()
     {
         this.Init();
-
-        Color[] colors = this.sprite.texture.GetPixels();
-        for (int i = 0; i<(int)colors.Length/2; i++)
-            colors[i] = new Color(1 - (float)1/4, 1 - (float)1/4, 1);
-        for (int i = (int)colors.Length/2; i<(int)colors.Length; i++)
-            colors[i] = new Color(1 - (float)1/4, 1, 1 - (float)1/4);
-        this.texture.SetPixels(colors);
     }
     /*    
     int count = 0;

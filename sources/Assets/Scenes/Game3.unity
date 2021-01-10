@@ -943,6 +943,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLose
       objectReference: {fileID: 0}
+    - target: {fileID: 3567241196041667416, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
+        type: 3}
+      propertyPath: m_Text
+      value: Oh no. I mixed it all wrong. Maybe I should take more time to observe
+        the virus and mix more carefully.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567241196041667416, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567241197008234878, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
+        type: 3}
+      propertyPath: m_Text
+      value: Oh my god! Oh my god. I can't belive in my eyes. Did it really happen?
+        Is this a dream? It really HAPPENED. The virus is defeated.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567241197008234878, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 012b48fb53eb2cc4ebe6321ccc67789d, type: 3}
 --- !u!1 &585748952
@@ -2552,7 +2574,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2563,9 +2585,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Time to plan out the idea on a computer, start tapping the screen to finish
-    testing. Oh and bombs will sometimes appear as roadblocks, try not to tap them
-    otherwise things get messy.
+  m_Text: 'Time to make the cure. Try to combine the biggest tube into different
+    color by dragging the smaller tubes to the bigger one. (Example: Red combines
+    with Green will result in Yellow). Hint: To cure this virus you must make each
+    color of it.'
 --- !u!222 &1852820692
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 11c7b2bd6ff375a49a04dccb34e4b3a5, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 2121683143232874035}
   Flag: 0
   index: 0
 --- !u!82 &2121683143232874035

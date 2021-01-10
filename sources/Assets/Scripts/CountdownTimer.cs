@@ -34,7 +34,13 @@ public class CountdownTimer : MyObject
             {
                 timeRemaining = 0;
                 timerIsRunning = false;
-                gameManager.lose();
+                if(gameManager == null)
+                {
+                    FindObjectOfType<Game3Manager>().lose();
+                }
+                else{
+                    gameManager.lose();
+                }
             }
         }
     }

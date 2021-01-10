@@ -11,7 +11,9 @@ Your goal is to help the scientist with his day-to-day activities and works, to 
 
 ## Screenshots
 
-![home](sources/Assets/Resources/Screenshots/home_screen.jpg) ![choose_screen](sources/Assets/Resources/Screenshots/choose_screen.jpg)
+![home](sources/Assets/Resources/Screenshots/home_choose.png =150x) 
+![game1](sources/Assets/Resources/Screenshots/game1.jpg =150x)
+![game2](sources/Assets/Resources/Screenshots/game2.png =150x)
 
 ## Sources
 

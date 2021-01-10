@@ -11,7 +11,7 @@ Your goal is to help the scientist with his day-to-day activities and works, to 
 
 ## Screenshots
 
-![home](sources/Assets/Resources/Screenshots/home_screen.jpg)
+![home](sources/Assets/Resources/Screenshots/home_screen.jpg) ![choose_screen](sources/Assets/Resources/Screenshots/choose_screen.jpg)
 
 ## Sources
 

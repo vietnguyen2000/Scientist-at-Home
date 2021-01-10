@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class UITextTypeWriter : MonoBehaviour, IPointerClickHandler
 {
 
-	Text txt;
+	protected Text txt;
     public float secsPerText = 0.025f;
 	string story;
     bool skip;

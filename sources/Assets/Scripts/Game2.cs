@@ -16,6 +16,11 @@ public class Game2 : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
     }
+    private void OnDisable() {
+        speed = 0;
+        monitor.SetFloat("speed",speed);
+        keyboard.SetFloat("speed",speed);
+    }
     float lastTimeTouch;
     float speed;
     // Update is called once per frame
@@ -43,7 +48,9 @@ public class Game2 : MonoBehaviour
         
         if(speed > 0)
             speed -= Time.deltaTime;
-        Debug.Log(speed);
+        else{
+            speed = 0;
+        }
         monitor.SetFloat("speed",speed);
         keyboard.SetFloat("speed",speed);
     }

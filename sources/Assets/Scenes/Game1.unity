@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48cca246f0ccf994097df0b32a13df6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
   camera: {fileID: 0}
   progressBar: {fileID: 0}
   TimePlay: {fileID: 1496575176}
@@ -2182,7 +2182,7 @@ PrefabInstance:
     - target: {fileID: 7050640872599561296, guid: 4107742f155f8024081df4906882a048,
         type: 3}
       propertyPath: timeRemaining
-      value: 5
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7050640873736184483, guid: 4107742f155f8024081df4906882a048,
         type: 3}

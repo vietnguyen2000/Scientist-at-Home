@@ -11,7 +11,7 @@ public class ChooseLevel : MonoBehaviour
     {
         int unlockedLevel = SaveLoadManager.Instance.SavedData.level;
         for (int i = 0 ; i < levels.Length; i ++){
-            if (i+1 > unlockedLevel){
+            if (i > unlockedLevel){
                 levels[i].interactable = false;
             }
         }

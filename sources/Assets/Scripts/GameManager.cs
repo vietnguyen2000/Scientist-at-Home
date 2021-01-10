@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
             disableObject[i].SetActive(false);
         }
         loseGameObject.SetActive(true);
+        ChooseLevel.level = 1;
     }
 
     public void win()
@@ -56,5 +57,6 @@ public class GameManager : MonoBehaviour
         }
         winGameObject.SetActive(true);
         SaveLoadManager.Instance.PassNewLevel(level);
+        ChooseLevel.level = level+1;
     }
 }

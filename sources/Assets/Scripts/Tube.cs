@@ -77,24 +77,24 @@ public class Tube : DragWindow, IPointerUpHandler
 
     void Update()
     {
-        bool winnable = initColor;
-        foreach (Color virusColor in virus.Remain())
-        {
-            if (obtainedColor(mainTube.spriteColor.color, virusColor))  {
-                virus.RemoveColor(virusColor);
-                winnable = true;
-            }
-            // NOTE: Mỗi lần chơi chỉ cần tìm được 1 màu của con virus, sau đó lọ màu sẽ được reset
-            else if (obtainable(mainTube.spriteColor.color, virusColor)) {
-                winnable = true;
-            }
-        }
-        if (!winnable)  {
-            gameManager.lose();
-        }
-        if (virus.AllWhite())    {
-            gameManager.win();
-        }
+        // bool winnable = initColor;
+        // foreach (Color virusColor in virus.Remain())
+        // {
+        //     if (obtainedColor(mainTube.spriteColor.color, virusColor))  {
+        //         virus.RemoveColor(virusColor);
+        //         winnable = true;
+        //     }
+        //     // NOTE: Mỗi lần chơi chỉ cần tìm được 1 màu của con virus, sau đó lọ màu sẽ được reset
+        //     else if (obtainable(mainTube.spriteColor.color, virusColor)) {
+        //         winnable = true;
+        //     }
+        // }
+        // if (!winnable)  {
+        //     gameManager.lose();
+        // }
+        // if (virus.AllWhite())    {
+        //     gameManager.win();
+        // }
     }
 
     private bool ableToMerge(Color color1, Color color2){

@@ -44,9 +44,9 @@ public class SaveLoadManager
     {
         SavedData = JsonUtility.FromJson<PlayerData>(File.ReadAllText(path));
     }
-    public void PassNewLevel()
+    public void PassNewLevel(int i)
     {
-        SavedData.level +=1;
+        SavedData.level = Mathf.Max(SavedData.level,i);
         WriteNewPlayerData();
     }
 }

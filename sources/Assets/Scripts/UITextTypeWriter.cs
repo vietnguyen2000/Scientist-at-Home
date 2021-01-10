@@ -13,11 +13,10 @@ public class UITextTypeWriter : MonoBehaviour, IPointerClickHandler
     protected bool skip;
 	protected virtual void Awake () 
 	{
-		if(txt == null) txt = GetComponent<Text>();
+		if (txt == null) txt = GetComponent<Text>();
 		story = txt.text;
 		txt.text = "";
-
-		StartCoroutine ("PlayText");
+		StartCoroutine("PlayText");
 	}
 
 	IEnumerator PlayText()

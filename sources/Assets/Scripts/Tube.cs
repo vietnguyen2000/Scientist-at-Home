@@ -17,6 +17,7 @@ public class Tube : DragWindow, IPointerUpHandler
     public Image spriteColor;
     public Collider2D coll;
     public Color finalColor;
+    public PixArt virus;
     static private bool initColor = true;
     public Vector3 initPos = new Vector3(93, 264, 0);
 
@@ -27,13 +28,13 @@ public class Tube : DragWindow, IPointerUpHandler
 
     public Color Merge(Color color1, Color color2){
         if (color2.r != 0)    {
-            return new Color(color1.r, color1.g - (float)64/255, color1.b - (float)64/255);
+            return new Color(color1.r, color1.g - (float)1/4, color1.b - (float)1/4);
         }
         else if (color2.g != 0)    {
-            return new Color(color1.r - (float)64/255, color1.g, color1.b - (float)64/255);
+            return new Color(color1.r - (float)1/4, color1.g, color1.b - (float)1/4);
         }
         else    {
-            return new Color(color1.r - (float)64/255, color1.g - (float)64/255, color1.b);
+            return new Color(color1.r - (float)1/4, color1.g - (float)1/4, color1.b);
         }
     }
 
@@ -48,6 +49,7 @@ public class Tube : DragWindow, IPointerUpHandler
     {
         initColor = true;
         gameManager = (GameManager)FindObjectOfType<GameManager>();
+        virus = FindObjectOfType<PixArt>();
         
         if (mainTube == null)
         {
@@ -59,11 +61,11 @@ public class Tube : DragWindow, IPointerUpHandler
         }
     }
 
-    private bool notObtainable(Color currColor, Color wantedColor)  {
+    private bool obtainable(Color currColor, Color wantedColor)  {
         if (currColor.r < wantedColor.r || currColor.g < wantedColor.g || currColor.b < wantedColor.b)  {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     private bool obtainedColor(Color currColor, Color wantedColor)  {
@@ -75,10 +77,28 @@ public class Tube : DragWindow, IPointerUpHandler
 
     void Update()
     {
-        if (!initColor && notObtainable(mainTube.spriteColor.color, finalColor))    {
+        // if (!initColor && notObtainable(mainTube.spriteColor.color, finalColor))    {
+        //     gameManager.lose();
+        // }
+        // else if (obtainedColor(mainTube.spriteColor.color, finalColor))   {
+        //     gameManager.win();
+        // }
+        bool winnable = initColor;
+        foreach (Color virusColor in virus.Remain())
+        {
+            if (obtainedColor(mainTube.spriteColor.color, virusColor))  {
+                virus.RemoveColor(virusColor);
+                winnable = true;
+            }
+            // NOTE: Mỗi lần chơi chỉ cần tìm được 1 màu của con virus, sau đó lọ màu sẽ được reset
+            else if (obtainable(mainTube.spriteColor.color, virusColor)) {
+                winnable = true;
+            }
+        }
+        if (!winnable)  {
             gameManager.lose();
         }
-        else if (obtainedColor(mainTube.spriteColor.color, finalColor))   {
+        if (virus.AllWhite())    {
             gameManager.win();
         }
     }
@@ -99,12 +119,12 @@ public class Tube : DragWindow, IPointerUpHandler
             if (coll.OverlapPoint(mainTube.transform.position))
             {
                 if (ableToMerge(mainTube.spriteColor.color, spriteColor.color)) {
-                    //Merge color
+                    //Merge color:
                     Color mergedColor = Merge(mainTube.spriteColor.color, spriteColor.color);
                     mainTube.spriteColor.color = mergedColor;
                     initColor = false;
 
-                    // //Delete the tube
+                    // Move the tube back to original position:
                     spriteColor.gameObject.SetActive(false);
                     Image spriteParent = spriteColor.GetComponentInParent<Image>();
                     spriteParent.gameObject.transform.localPosition = initPos;

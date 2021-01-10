@@ -61,4 +61,11 @@ public class AudioGen : MonoBehaviour
         AudioClip clip = clips[clips.Length - 1];
         audioSource.PlayOneShot(clip);
     }
+
+    //-------------------------------------CoffeeCup-----------------------------------------------------
+    public void CoffeeSpill()
+    {
+        AudioClip clip = clips[0];
+        audioSource.PlayOneShot(clip);
+    }
 }

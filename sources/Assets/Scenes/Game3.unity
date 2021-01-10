@@ -957,7 +957,7 @@ PrefabInstance:
     - target: {fileID: 3567241197008234878, guid: 012b48fb53eb2cc4ebe6321ccc67789d,
         type: 3}
       propertyPath: m_Text
-      value: Oh my god! Oh my god. I can't belive in my eyes. Did it really happen?
+      value: Oh my god! Oh my god. I can't believe in my eyes. Did it really happen?
         Is this a dream? It really HAPPENED. The virus is defeated.
       objectReference: {fileID: 0}
     - target: {fileID: 3567241197008234878, guid: 012b48fb53eb2cc4ebe6321ccc67789d,

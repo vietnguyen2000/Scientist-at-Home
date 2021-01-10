@@ -34,7 +34,7 @@ public class SaveLoadManager
     string path;
     public void WriteDefaultData()
     {
-        SavedData.level = 1;
+        SavedData.level = 0;
     }
     public void WriteNewPlayerData()
     {

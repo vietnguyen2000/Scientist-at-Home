@@ -81,7 +81,7 @@ public class Tube : DragWindow, IPointerUpHandler
     }
 
     private void updateColor()  {
-        Debug.Log("Hiệu ứng gì đó cho biết m đã làm mất được một màu của virus");
+        Debug.Log("Hiệu ứng gì đó");
         StartCoroutine(delay());
     }
 
@@ -137,7 +137,7 @@ public class Tube : DragWindow, IPointerUpHandler
                     }
                     if (!winnable)
                     {
-                        game3Manager.lose();
+                        updateColor();
                     }
                     if (virus.AllWhite())
                     {

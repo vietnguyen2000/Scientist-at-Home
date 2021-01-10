@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7110688054702679720}
   - component: {fileID: 7110688054702679721}
   m_Layer: 0
-  m_Name: Boom
+  m_Name: Coffe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7110688055931134836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.058, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7110688056258829649}
@@ -92,9 +92,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07657044}
+  m_Offset: {x: -0.026448421, y: -0.07657044}
   serializedVersion: 2
-  m_Radius: 0.4234296
+  m_Radius: 0.39698118
 --- !u!1 &7110688056258829648
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: -109655873
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7034660610512690298, guid: 2bbc680d8384bfe42b996427a2430bde,
+  m_Sprite: {fileID: -1850988681521255122, guid: bccb60f3ff55c514992d77ca716434aa,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

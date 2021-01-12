@@ -153,7 +153,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1021,7 +1021,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.90174484, y: -3.8720207}
+  m_Offset: {x: 0.8345752, y: -3.057478}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1032,7 +1032,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 43.614906, y: 145.97147}
+  m_Size: {x: 20.1978, y: 57.65149}
   m_EdgeRadius: 0
 --- !u!114 &585748955
 MonoBehaviour:
@@ -1563,7 +1563,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.61491394, y: -3.972519}
+  m_Offset: {x: 0.61608124, y: -3.9723911}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1574,7 +1574,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 240.49805, y: 276.69406}
+  m_Size: {x: 76.363266, y: 89.91695}
   m_EdgeRadius: 0
 --- !u!114 &764785253
 MonoBehaviour:
@@ -2144,7 +2144,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10899925, y: -4.079712}
+  m_Offset: {x: 0.8345752, y: -3.057478}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2155,7 +2155,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 44.118107, y: 142.39468}
+  m_Size: {x: 20.1978, y: 57.65149}
   m_EdgeRadius: 0
 --- !u!114 &1435187435
 MonoBehaviour:
@@ -2716,6 +2716,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 094fb767445b7bf459a1c7dacc1a8ce3, type: 3}
+--- !u!1001 &1924122666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5786694300484520654, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 460.8157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1186.8728
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1523.9406
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103093, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_Name
+      value: MySceneManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2535b33044e7dee48b954f12137bc1d9, type: 3}
 --- !u!1 &1986151784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,7 +2844,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6818819, y: -3.5380783}
+  m_Offset: {x: 0.8345752, y: -3.057478}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2781,7 +2855,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 45.409615, y: 141.83702}
+  m_Size: {x: 20.1978, y: 57.65149}
   m_EdgeRadius: 0
 --- !u!114 &1986151787
 MonoBehaviour:

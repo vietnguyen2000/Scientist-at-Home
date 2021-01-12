@@ -17,7 +17,7 @@ public class UITextTypeWriter_LoadScene : UITextTypeWriter
         while (skip == false){
             yield return null;
         }
-        SceneManager.LoadScene(SceneName,LoadSceneMode.Single);
+        FindObjectOfType<MySceneManager>().LoadScene(SceneName);
     }
 
 }

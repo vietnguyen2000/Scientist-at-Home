@@ -10,6 +10,7 @@ public abstract class ClickableObject : MyObject
     public Animator animator;
     public bool isClicked = false;
     public float secondAlive;
+    public bool isDead = false;
     
     // Start is called before the first frame update
     protected override void Start()
@@ -20,6 +21,7 @@ public abstract class ClickableObject : MyObject
 
     protected virtual void OnEnable() {
         isClicked = false;
+        isDead = false;
         StartCoroutine(DisableAfterTime(secondAlive));
     }
 
@@ -43,7 +45,8 @@ public abstract class ClickableObject : MyObject
     }
     protected virtual IEnumerator DisableAfterAnimationState(string name)
     {
-        yield return 0;
+        isDead = true;
+        yield return null;
         while ((animator.GetCurrentAnimatorStateInfo(0).IsName(name))){
             yield return null;
         }
@@ -54,6 +57,6 @@ public abstract class ClickableObject : MyObject
     IEnumerator DisableAfterTime(float sec){
         yield return 0;
         yield return new WaitForSeconds(sec);
-        gameObject.SetActive(false);
+        if(!isDead) gameObject.SetActive(false);
     }
 }

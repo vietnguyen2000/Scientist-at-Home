@@ -329,8 +329,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Time to plan out the idea on a computer, start tapping the screen to finish
-    testing. Oh and bombs will sometimes appear as roadblocks, try not to tap them
-    otherwise things get messy.
+    testing. Oh and coffee cup will sometimes appear as roadblocks, try not to tap
+    them otherwise things get messy.
 --- !u!222 &428194759
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1782,7 +1782,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1884,6 +1884,80 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   Flag: 0
   index: 0
+--- !u!1001 &2038126406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5786694300484520654, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 460.8157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1186.8728
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1523.9406
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103091, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837834046284103093, guid: 2535b33044e7dee48b954f12137bc1d9,
+        type: 3}
+      propertyPath: m_Name
+      value: MySceneManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2535b33044e7dee48b954f12137bc1d9, type: 3}
 --- !u!1 &2118564460
 GameObject:
   m_ObjectHideFlags: 0

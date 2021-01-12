@@ -3,7 +3,7 @@
 Source code of an Android game made with Unity to compete in [Gameloft Game Jam 2020](https://gamejam.gameloft.com/), a 48 hours Game Making Challenge.
 
 # Theme announcment
-The theme is: **LIFE AT HOME**
+The theme is: **LIFE AT HOME**<br />
 Human life is now heavily affected by COVID. Almost all activities in normal life are brought home, such as studying, working, cooking, watching movies, etc. This makes the house that normally has nothing outstanding, now becoming more special than ever.
 
 ## About this game

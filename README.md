@@ -1,6 +1,6 @@
 # Null Reference - Scientist at Home
 
-Source code of an Android game made with Unity to compete in [Gameloft Game Jam 2020](https://gamejam.gameloft.com/), a 48 hours Game Making Challenge.
+Source code of an Android game made with Unity won the 2nd runner up in the [Gameloft Game Jam 2020](https://gamejam.gameloft.com/) competition, a 48 hours Game Making Challenge.
 
 ## Theme
 The theme is: **LIFE AT HOME**<br />

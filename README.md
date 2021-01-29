@@ -38,8 +38,8 @@ All visuals and audios in this game and project are ours or obtained free and wi
 
 ## Author
 - Null Reference Team:
-    - <b>Nguyen Hoang Viet</b>
-    - Tran Khanh Tung
-    - Do Minh Tam
-    - Nguyen Long Vu
+    - [Nguyen Hoang Viet](https://github.com/vietnguyen2000)
+    - [Tran Khanh Tung](https://github.com/KhanhTungTran)
+    - [Do Minh Tam](https://github.com/xXHellgate25Xx)
+    - [Nguyen Long Vu](https://github.com/VuNguyenLong)
 - Please contact us at: viet.nguyen.2000@hcmut.edu.vn

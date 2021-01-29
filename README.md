@@ -42,4 +42,4 @@ All visuals and audios in this game and project are ours or obtained free and wi
     - Tran Khanh Tung
     - Do Minh Tam
     - Nguyen Long Vu
-- Please contact us at: viet.nguyen2000@hcmut.edu.vn
+- Please contact us at: viet.nguyen.2000@hcmut.edu.vn

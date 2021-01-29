@@ -37,4 +37,4 @@ Your goal is to help the scientist with his day-to-day activities and works, to 
 All visuals and audios in this game and project are ours or obtained free and with the approved to use from sources over the Internet
 
 ## Author
-Null Reference team. Please contact us at: viet.nguyen2000@hcmut.edu.vn
+Null Reference team. Please contact us at: viet.nguyen.2000@hcmut.edu.vn
